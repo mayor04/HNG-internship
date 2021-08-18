@@ -1,8 +1,11 @@
+
 # HNG stage 2
 
 ## Introduction
 
 As specified by the [HNG team]('https://hng.tech/') for stage two this is a flutter application built more like a chat app, it was built by including all the specification in the simplest form with good design UI
+
+https://user-images.githubusercontent.com/67462604/129966526-cc1d3b31-4fe8-47a3-918e-1edd904f5eb0.mp4
 
 <!-- A few resources to get you started if this is your first Flutter project:
 
