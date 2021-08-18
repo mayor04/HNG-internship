@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hng_stage_2/screens/chat.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             children: [
               logo(),
-              const SizedBox(height: 200),
+              const SizedBox(height: 140),
               textChatWithMayowa(),
               const SizedBox(height: 50),
               SizedBox(
@@ -38,10 +39,26 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget logo() {
     return Align(
       alignment: Alignment.centerLeft,
-      child: Container(
-          //This is the hng logo
+      child: GestureDetector(
+        onTap: () {
+          _openLink();
+        },
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(24, 40, 0, 0),
+          child: Image.asset(
+            'assets/images/hng_logo.png',
+            height: 40,
           ),
+        ),
+      ),
     );
+  }
+
+  _openLink() async {
+    String link = 'https://hng.tech/';
+    if (await canLaunch(link)) {
+      await launch(link);
+    } else {}
   }
 
   Widget textChatWithMayowa() {
@@ -49,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
       'Chat With \n Mayowa',
       style: TextStyle(
         color: Colors.grey[800],
-        fontSize: 27,
+        fontSize: 30,
         fontWeight: FontWeight.w900,
       ),
     );
@@ -68,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
         }
       },
       decoration: InputDecoration(
-        hintText: 'Input you name to get started',
+        hintText: 'Input your name to get started',
         border: border(),
         enabledBorder: border(),
         focusedBorder: border(
@@ -76,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         hintStyle: const TextStyle(
           fontSize: 15,
-          color: Colors.black45,
+          color: Colors.black38,
         ),
         contentPadding: const EdgeInsets.fromLTRB(16, 5, 16, 5),
       ),
