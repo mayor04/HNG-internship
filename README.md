@@ -9,6 +9,8 @@ https://user-images.githubusercontent.com/67462604/129966526-cc1d3b31-4fe8-47a3-
 
 This app is hosted on appetize.io a platform for hosting mobile apps,
 follow this [link](https://appetize.io/app/ka977m3yay1y4ajr9r1rk61x1w?device=nexus5&scale=75&orientation=portrait&osVersion=8.1) to view the app
+
+To clone this repo 
 <!-- A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
